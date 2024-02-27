@@ -1,10 +1,10 @@
 const dotenv = require('dotenv')
-dotenv.config({ path: path.resolve(__dirname, '/.env') });
 const express = require('express')
 const app = express()
 const hbs = require('hbs')
 const path = require('path')
 
+dotenv.config({ path: path.resolve(__dirname, '/.env') });
 // Define Router paths
 const publicDirectoryPath = path.join(__dirname + '/public') //for static images and logos
 const viewsPath = path.join(__dirname + '/views')
