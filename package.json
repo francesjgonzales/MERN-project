@@ -1,7 +1,7 @@
 {
   "name": "mern-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Package.json and NPM set up",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
