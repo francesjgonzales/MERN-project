@@ -34,6 +34,10 @@
 
 - Once everything is set, always refresh your server and application for errors
 
+## Deployment
+
+1. Go to MongoDB and copy connection string under **Connect to your Application**
+
 ## Resources
 
 (hbs for express)[https://www.geeksforgeeks.org/handlebars-templating-in-expressjs/]
