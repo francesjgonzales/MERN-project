@@ -1,10 +1,10 @@
 const dotenv = require('dotenv')
+dotenv.config();
 const express = require('express')
 const app = express()
 const hbs = require('hbs')
 const path = require('path')
 
-dotenv.config({ path: path.resolve(__dirname, '/.env') });
 // Define Router paths
 const publicDirectoryPath = path.join(__dirname + '/public') //for static images and logos
 const viewsPath = path.join(__dirname + '/views')
@@ -20,6 +20,7 @@ app.use(express.static(publicDirectoryPath))
 // Integrate Mongoose for MongoDB
 
 const mongoose = require('mongoose')
+
 
 mongoose.connect(process.env.DATABASE_URL)
 const db = mongoose.connection
