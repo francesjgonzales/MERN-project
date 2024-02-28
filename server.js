@@ -1,6 +1,7 @@
-require('dotenv').config().parsed;
 
 const express = require('express')
+require('dotenv').config().parsed;
+
 const app = express()
 const hbs = require('hbs')
 const path = require('path')
@@ -18,11 +19,12 @@ hbs.registerPartials(viewsPartialsPath)
 app.use(express.static(publicDirectoryPath))
 
 // Integrate Mongoose for MongoDB
-
+const data = process.env.DATABASE_URL;
 const mongoose = require('mongoose')
+
 /* mongoose.connect(process.env.DATABASE_URL) */
-mongoose.connect(process.env.DATABASE_URL)
-console.log(process.env.DATABASE_URL)
+mongoose.connect(data)
+
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('connected to data base'))
